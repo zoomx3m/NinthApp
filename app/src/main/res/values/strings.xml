@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">NinthApp</string>
+    <string name="headText_AM">Hello</string>
+    <string name="headLogin_AM">Login:</string>
+    <string name="headPass_AM">Password:</string>
+    <string name="Register">Register</string>
+    <string name="Login">Login</string>
+    <string name="Registry_form">Register form:</string>
+    <string name="headfirstName_RF">First Name:</string>
+    <string name="headlastName_RF">Last Name:</string>
+    <string name="female">female</string>
+    <string name="male">male</string>>
+    <string name="hello">Hello </string>
+    <string name="already_registered">" already registered"</string>
+    <string name="ok">OK</string>
+    <string name="exclamation">!</string>
+    <string name="login_succesful">Login successful</string>
+    <string name="welcome">"Welcome: "</string>
+    <string name="login_fail">Login fail</string>
+    <string name="person">"Person "</string>
+    <string name="no_exist">" doesn't exist"</string>
+    <string name="reg_succes">Registration is successful</string>
+    <string name="registered">" registered"</string>
+    <string name="Try_againe">Try againe</string>
+    <string name="login">Login</string>
+    <string name="already_used">" is already used."</string>
+
+</resources>
