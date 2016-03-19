@@ -6,9 +6,6 @@ public class Constants {
     public static final String HEADLESS_FRAGMENT_TAG = "headless fragment";
     public static final String LIST_KEY = "list";
     public static final String PERSON_KEY = "person";
-    public static final String FIRST_NAME_KEY = "first name";
-    public static final String ADDRESSING_KEY = "mr or mrs";
-    public static final String GREETING_KEY = "greeting";
     public static final String TITLE_KEY = "title";
     public static final String MESSAGE_KEY = "message";
     public static final String DIALOG_FRAGMENT_TAG = "dialog";
