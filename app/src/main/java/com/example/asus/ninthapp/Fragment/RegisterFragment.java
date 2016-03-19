@@ -18,8 +18,6 @@ import com.example.asus.ninthapp.Utils.Gender;
 import com.example.asus.ninthapp.Utils.Person;
 
 public class RegisterFragment extends Fragment {
-//    private TextView tvHead;
-
     private EditText etLogin;
     private EditText etPassword;
     private EditText etFirstName;

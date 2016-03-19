@@ -16,12 +16,12 @@ import com.example.asus.ninthapp.MainActivity;
 import com.example.asus.ninthapp.R;
 
 public class LoginFragment extends Fragment implements View.OnClickListener {
-    TextView tvHead;
-    EditText etLogin;
-    EditText etPassword;
-    TextView btn_Register;
-    Button btnLogin;
-    EventHandler evHandler;
+    private TextView tvHead;
+    private EditText etLogin;
+    private EditText etPassword;
+    private TextView btn_Register;
+    private Button btnLogin;
+    private EventHandler evHandler;
 
     @Nullable
     @Override

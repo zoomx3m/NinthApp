@@ -9,7 +9,6 @@ public final class Person implements Serializable {
     private String lastName;
     private Gender gender;
 
-
     //getter
     public String getLogin() {
         return login;
