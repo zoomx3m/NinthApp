@@ -10,151 +10,150 @@
     tools:context="com.example.asus.ninthapp.MainActivity">
 
 
-    <RelativeLayout
-        android:id="@+id/Layout_1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal">
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/Layout_1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="center_horizontal">-->
 
-        <TextView
-            android:id="@+id/headText_RF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_alignParentTop="true"
-            android:textSize="@dimen/head_txt_size"
-            android:text="@string/Registry_form"/>
+        <!--<TextView-->
+            <!--android:id="@+id/headText_RF"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:textSize="@dimen/head_txt_size"-->
+            <!--android:text="@string/Registry_form"/>-->
 
-        <LinearLayout
-            android:id="@+id/linlay_1st"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_below="@+id/headText_RF">
+        <!--<LinearLayout-->
+            <!--android:id="@+id/linlay_1st"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="2"-->
+            <!--android:layout_below="@+id/headText_RF">-->
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/tilay_in21"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:id="@+id/tilay_in21"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
 
-                android:layout_weight="1">
+                <!--android:layout_weight="1">-->
 
-                <EditText
-                    android:id="@+id/et_Login_RF"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/headLogin_AM"
-                    android:textSize="@dimen/txtSizeAll"
-                    android:layout_weight="1"/>
+                <!--<EditText-->
+                    <!--android:id="@+id/et_Login_RF"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:hint="@string/headLogin_AM"-->
+                    <!--android:textSize="@dimen/txtSizeAll"-->
+                    <!--android:layout_weight="1"/>-->
 
-            </android.support.design.widget.TextInputLayout>
+            <!--</android.support.design.widget.TextInputLayout>-->
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/tilay_in22"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tilay_in21"
-                android:layout_weight="1"                >
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:id="@+id/tilay_in22"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/tilay_in21"-->
+                <!--android:layout_weight="1"                >-->
 
-                <EditText
-                    android:id="@+id/et_Password_RF"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/indent"
-                    android:hint="@string/headPass_AM"
-                    android:textSize="@dimen/txtSizeAll"
-                    android:inputType="textPassword"
-                    android:layout_weight="1"/>
+                <!--<EditText-->
+                    <!--android:id="@+id/et_Password_RF"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="@dimen/indent"-->
+                    <!--android:hint="@string/headPass_AM"-->
+                    <!--android:textSize="@dimen/txtSizeAll"-->
+                    <!--android:inputType="textPassword"-->
+                    <!--android:layout_weight="1"/>-->
 
-            </android.support.design.widget.TextInputLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linlay_2nd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_below="@+id/linlay_1st">
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/tilay_in23"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/et_Login_RF"
-                android:layout_weight="1">
-
-                <EditText
-                    android:id="@+id/et_firstName_RF"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/indent"
-                    android:hint="@string/headfirstName_RF"
-                    android:textSize="@dimen/txtSizeAll"
-                    android:layout_weight="1"/>
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/tilay_in24"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tilay_in23"
-                android:layout_weight="1">
-
-                <EditText
-                    android:id="@+id/et_lastName_RF"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/indent"
-                    android:hint="@string/headlastName_RF"
-                    android:textSize="@dimen/txtSizeAll"
-                    android:layout_weight="1"/>
-
-            </android.support.design.widget.TextInputLayout>
+            <!--</android.support.design.widget.TextInputLayout>-->
 
 
+        <!--</LinearLayout>-->
 
-        </LinearLayout>
+        <!--<LinearLayout-->
+            <!--android:id="@+id/linlay_2nd"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="2"-->
+            <!--android:layout_below="@+id/linlay_1st">-->
 
-        <RadioGroup
-            android:id="@+id/rg_rbn_RF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/indent"
-            android:layout_below="@+id/linlay_2nd"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp">
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:id="@+id/tilay_in23"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/et_Login_RF"-->
+                <!--android:layout_weight="1">-->
 
-            <RadioButton android:id="@+id/radio_female_RF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/female"
-                android:onClick="onRadioButtonClicked"/>
+                <!--<EditText-->
+                    <!--android:id="@+id/et_firstName_RF"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="@dimen/indent"-->
+                    <!--android:hint="@string/headfirstName_RF"-->
+                    <!--android:textSize="@dimen/txtSizeAll"-->
+                    <!--android:layout_weight="1"/>-->
 
-            <RadioButton android:id="@+id/radio_male_RF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/male"
-                android:onClick="onRadioButtonClicked"/>
-        </RadioGroup>
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:id="@+id/tilay_in24"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/tilay_in23"-->
+                <!--android:layout_weight="1">-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_lastName_RF"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="@dimen/indent"-->
+                    <!--android:hint="@string/headlastName_RF"-->
+                    <!--android:textSize="@dimen/txtSizeAll"-->
+                    <!--android:layout_weight="1"/>-->
+
+            <!--</android.support.design.widget.TextInputLayout>-->
 
 
-        <Button
-            android:id="@+id/btn_registe_RF"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:textSize="@dimen/txtSizeAll"
-            android:text="@string/Login"
-            android:layout_below="@+id/rg_rbn_RF"
-            android:layout_centerHorizontal="true" />
 
-    </RelativeLayout>
+        <!--</LinearLayout>-->
+
+        <!--<RadioGroup-->
+            <!--android:id="@+id/rg_rbn_RF"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingBottom="@dimen/indent"-->
+            <!--android:layout_below="@+id/linlay_2nd"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginTop="30dp">-->
+
+            <!--<RadioButton android:id="@+id/radio_female_RF"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/female" />-->
+
+            <!--<RadioButton android:id="@+id/radio_male_RF"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/male" />-->
+        <!--</RadioGroup>-->
+
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_registe_RF"-->
+            <!--android:layout_width="220dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:clickable="true"-->
+            <!--android:textSize="@dimen/txtSizeAll"-->
+            <!--android:text="@string/Login"-->
+            <!--android:layout_below="@+id/rg_rbn_RF"-->
+            <!--android:layout_centerHorizontal="true" />-->
+
+    <!--</RelativeLayout>-->
+
 
 
 </RelativeLayout>

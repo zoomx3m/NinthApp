@@ -21,22 +21,14 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     private EditText etPassword;
     private TextView btnRegister;
     private Button btnLogin;
-    private EventHandler eventHandler;
+    private EventHandler evHandler;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_login, container, false);
 
-        tvHead = (TextView) view.findViewById(R.id.headText_AM);
-        etLogin = (EditText) view.findViewById(R.id.et_Login_AM);
-        etPassword = (EditText) view.findViewById(R.id.et_Password_AM);
-        btnRegister = (TextView) view.findViewById(R.id.tv_register_AM);
-        btnLogin = (Button) view.findViewById(R.id.btn_login_AM);
-        eventHandler = (EventHandler) getActivity();
-        etLogin.setOnClickListener(this);
-        btnRegister.setOnClickListener(this);
-
+        initElements(view);
         return view;
     }
 
@@ -47,14 +39,12 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
             case R.id.btn_login_AM:
                 String login = etLogin.getText().toString();
                 String password = etPassword.getText().toString();
-                eventHandler.onButtonLoginPressed(login, password);
+                evHandler.onButtonLoginPressed(login, password);
                 break;
             case R.id.tv_register_AM:
-                eventHandler.onButtonRegisterPressed();
+                evHandler.onButtonRegisterPressed();
                 break;
-
         }
-
     }
 
     public void refreshHead (String greeting){
@@ -70,6 +60,16 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         }else {
             refreshHead(message);
         }
+    }
 
+    private void initElements(View view) {
+        tvHead = (TextView) view.findViewById(R.id.headText_AM);
+        etLogin = (EditText) view.findViewById(R.id.et_Login_AM);
+        etPassword = (EditText) view.findViewById(R.id.et_Password_AM);
+        btnRegister = (TextView) view.findViewById(R.id.tv_register_AM);
+        btnLogin = (Button) view.findViewById(R.id.btn_login_AM);
+        evHandler = (EventHandler) getActivity();
+        btnLogin.setOnClickListener(this);
+        btnRegister.setOnClickListener(this);
     }
 }

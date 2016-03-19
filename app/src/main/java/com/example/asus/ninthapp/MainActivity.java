@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity implements EventHandler {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        commitLoginFragment();
         commitDataHeadlessFragment();
+        commitLoginFragment();
     }
 
     private void commitLoginFragment(){
@@ -74,14 +74,13 @@ public class MainActivity extends AppCompatActivity implements EventHandler {
         Person person = dataFragment.serchRegistredUser(login, password);
         dataFragment.setCurrentPerson(person);
         if (person != null){
-            String fullUserName = person.getHeadLineName();
-            String greeting = getString(R.string.hello) + " " + fullUserName + getString(R.string.exclamation);
-
+            String fullPersonName = person.getHeadLineName();
+            String greeting = getString(R.string.hello) + " " + fullPersonName + getString(R.string.exclamation);
             getDataFragment().storeText(greeting);
             loginFragment.refreshHead(greeting);
 
             String dialogTitle = getString(R.string.login_succesful);
-            String dialogMessage = getString(R.string.welcome) + fullUserName + getString(R.string.exclamation);
+            String dialogMessage = getString(R.string.welcome) + fullPersonName + getString(R.string.exclamation);
             showFragmentDialog(dialogTitle, dialogMessage);
             return true;
 
@@ -95,7 +94,35 @@ public class MainActivity extends AppCompatActivity implements EventHandler {
 
     private void showFragmentDialog (String title, String message ){
         MyDialogFragment dialog = MyDialogFragment.newInstance(title, message);
-        dialog.show(this.getFragmentManager(),Constants.DIALOG_FRAGMENT_TAG);
+        dialog.show(this.getFragmentManager(), Constants.DIALOG_FRAGMENT_TAG);
+    }
+
+    @Override
+    public void onButtonRegisterPressed() {
+        commitRegisterFragment();
+    }
+
+    @Override
+    public void onButtonRegisterOk(Person person) {
+        DataHeadlessFragment dataFragment = getDataFragment();
+
+        String fullPersonName = person.getHeadLineName();
+        String greeting = getString(R.string.hello) + " " + fullPersonName + getString(R.string.exclamation);
+        //stores the text that will be shown in login fragment
+        getDataFragment().storeText(greeting);
+
+        if (!dataFragment.loginUsed(person)) {
+            dataFragment.registerPerson(person);
+            String dialogTitle = getString(R.string.reg_succes);
+            String dialogMessage = fullPersonName + getString(R.string.registered);
+            showFragmentDialog(dialogTitle, dialogMessage);
+        } else {
+            String dialogTitle = getString(R.string.Try_againe);
+            String dialogMessage = getString(R.string.login)
+                    + person.getLogin() + getString(R.string.already_used);
+            showFragmentDialog(dialogTitle, dialogMessage);
+        }
+
     }
 
     private void showAlertDialog(String title, String message) {
@@ -113,34 +140,6 @@ public class MainActivity extends AppCompatActivity implements EventHandler {
         alert.show();
     }
 
-    @Override
-    public void onButtonRegisterPressed() {
-        commitRegisterFragment();
-
-    }
-
-    @Override
-    public void onButtonRegisterOk(Person person) {
-        DataHeadlessFragment dataFragment = getDataFragment();
-
-        String fullUserName = person.getHeadLineName();
-        String greeting = getString(R.string.hello) + " " + fullUserName + getString(R.string.exclamation);
-        //stores the text that will be shown in login fragment
-        getDataFragment().storeText(greeting);
-
-        if (!dataFragment.loginUsed(person)) {
-            dataFragment.registerUser(person);
-            String dialogTitle = getString(R.string.reg_succes);
-            String dialogMessage = fullUserName + getString(R.string.registered);
-            showFragmentDialog(dialogTitle, dialogMessage);
-        } else {
-            String dialogTitle = getString(R.string.Try_againe);
-            String dialogMessage = getString(R.string.login)
-                    + person.getLogin() + getString(R.string.already_used);
-            showFragmentDialog(dialogTitle, dialogMessage);
-        }
-
-    }
 
     @Override
     public void onBackPressed() {
@@ -150,6 +149,5 @@ public class MainActivity extends AppCompatActivity implements EventHandler {
             super.onBackPressed();
         }
     }
-
 
 }

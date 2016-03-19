@@ -24,5 +24,6 @@
     <string name="Try_againe">Try againe</string>
     <string name="login">Login</string>
     <string name="already_used">" is already used."</string>
+    <string name="fill_in_fields">Please, fill in all the fields.</string>
 
 </resources>

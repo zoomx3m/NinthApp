@@ -42,7 +42,7 @@ public class DataHeadlessFragment extends Fragment {
             outState.putSerializable(Constants.USER_KEY, currentPerson);
         }
 
-        public void registerUser(Person person) {
+        public void registerPerson(Person person) {
             String login = person.getLogin();
             String password = person.getPassword();
             if (serchRegistredUser(login, password) == null) {

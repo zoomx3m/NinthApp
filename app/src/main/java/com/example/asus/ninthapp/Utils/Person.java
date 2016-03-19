@@ -10,16 +10,6 @@ public final class Person implements Serializable {
     private Gender gender;
 
 
-//public Person(String login,String password, String firstName,String lastName, String gender){
-//    this.login = login;
-//    this.password = password;
-//    this.firstName = firstName;
-//    this.lastName = lastName;
-//    this.gender = Gender.female;
-//    this.gender = Gender.male;
-//}
-
-
     //getter
     public String getLogin() {
         return login;
@@ -71,13 +61,8 @@ public final class Person implements Serializable {
         }
     }
 
-    public String setLogin (){
-        return login;
-    }
-
     public String getHeadLineName (){
         return getMale_Female() + " " + getFirstName() + " " + getLastName();
     }
-
 
 }
