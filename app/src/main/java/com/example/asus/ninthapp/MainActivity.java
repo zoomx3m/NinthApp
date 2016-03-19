@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity implements EventHandler {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        commitDataHeadlessFragment();
         commitLoginFragment();
+        commitDataHeadlessFragment();
     }
 
     private void commitLoginFragment(){
-        if (getSupportFragmentManager().findFragmentByTag(Constants.LOGIN_FRAGMENT_TAG) ==null){
+        if (getSupportFragmentManager().findFragmentByTag(Constants.LOGIN_FRAGMENT_TAG) == null){
             LoginFragment loginFragment = new LoginFragment();
             getSupportFragmentManager()
                     .beginTransaction()
@@ -41,9 +41,12 @@ public class MainActivity extends AppCompatActivity implements EventHandler {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.actFragment,registerFragment,Constants.REGISTER_FRAGMENT_TAG)
-                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+
+//                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+
                 .addToBackStack(Constants.REGISTER_FRAGMENT_TAG)
-                .commit();
+                .commit()
+        ;
     }
 
     private void commitDataHeadlessFragment(){
@@ -53,7 +56,6 @@ public class MainActivity extends AppCompatActivity implements EventHandler {
                     .beginTransaction()
                     .add(dataHeadlessFragment,Constants.HEADLESS_FRAGMENT_TAG)
                     .commit();
-
         }
     }
 
@@ -65,12 +67,10 @@ public class MainActivity extends AppCompatActivity implements EventHandler {
         return (LoginFragment) getSupportFragmentManager().findFragmentByTag(Constants.LOGIN_FRAGMENT_TAG);
     }
 
-
     @Override
     public boolean onButtonLoginPressed(String login, String password) {
         DataHeadlessFragment dataFragment = getDataFragment();
         LoginFragment loginFragment = getLoginFragment();
-
         Person person = dataFragment.serchRegistredUser(login, password);
         dataFragment.setCurrentPerson(person);
         if (person != null){
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements EventHandler {
             showFragmentDialog(dialogTitle, dialogMessage);
             return true;
 
-        }else {
+        } else {
             String dialogTitle = getString(R.string.login_fail);
             String dialogMessage = getString(R.string.person) + login + getString(R.string.no_exist);
             showAlertDialog(dialogTitle, dialogMessage);
@@ -122,7 +122,6 @@ public class MainActivity extends AppCompatActivity implements EventHandler {
                     + person.getLogin() + getString(R.string.already_used);
             showFragmentDialog(dialogTitle, dialogMessage);
         }
-
     }
 
     private void showAlertDialog(String title, String message) {
@@ -139,7 +138,6 @@ public class MainActivity extends AppCompatActivity implements EventHandler {
         AlertDialog alert = ad.create();
         alert.show();
     }
-
 
     @Override
     public void onBackPressed() {

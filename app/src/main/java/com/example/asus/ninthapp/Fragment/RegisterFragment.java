@@ -19,6 +19,7 @@ import com.example.asus.ninthapp.Utils.Person;
 
 public class RegisterFragment extends Fragment {
 //    private TextView tvHead;
+
     private EditText etLogin;
     private EditText etPassword;
     private EditText etFirstName;
@@ -27,7 +28,6 @@ public class RegisterFragment extends Fragment {
     private RadioButton btnMale;
     private Button btnRegister;
     private EventHandler evHandler;
-
 
     @Nullable
     @Override
@@ -61,14 +61,12 @@ public class RegisterFragment extends Fragment {
                     }
                     evHandler.onButtonRegisterOk(person);
                 }
-
             }
         });
         return view;
     }
 
     private void initElements (View view) {
-//        tvHead = (TextView) view.findViewById(R.id.headText_RF);
         etLogin = (EditText) view.findViewById(R.id.et_Login_RF);
         etPassword = (EditText) view.findViewById(R.id.et_Password_RF);
         etFirstName = (EditText) view.findViewById(R.id.et_firstName_RF);
@@ -77,6 +75,7 @@ public class RegisterFragment extends Fragment {
         btnMale = (RadioButton) view.findViewById(R.id.radio_male_RF);
         btnRegister = (Button) view.findViewById(R.id.btn_register_RF);
         evHandler = (EventHandler) getActivity();
+
     }
 
 }

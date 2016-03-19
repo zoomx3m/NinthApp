@@ -16,12 +16,12 @@ import com.example.asus.ninthapp.MainActivity;
 import com.example.asus.ninthapp.R;
 
 public class LoginFragment extends Fragment implements View.OnClickListener {
-    private TextView tvHead;
-    private EditText etLogin;
-    private EditText etPassword;
-    private TextView btnRegister;
-    private Button btnLogin;
-    private EventHandler evHandler;
+    TextView tvHead;
+    EditText etLogin;
+    EditText etPassword;
+    TextView btn_Register;
+    Button btnLogin;
+    EventHandler evHandler;
 
     @Nullable
     @Override
@@ -66,10 +66,10 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         tvHead = (TextView) view.findViewById(R.id.headText_AM);
         etLogin = (EditText) view.findViewById(R.id.et_Login_AM);
         etPassword = (EditText) view.findViewById(R.id.et_Password_AM);
-        btnRegister = (TextView) view.findViewById(R.id.tv_register_AM);
+        btn_Register = (TextView) view.findViewById(R.id.tv_register_AM);
         btnLogin = (Button) view.findViewById(R.id.btn_login_AM);
         evHandler = (EventHandler) getActivity();
         btnLogin.setOnClickListener(this);
-        btnRegister.setOnClickListener(this);
+        btn_Register.setOnClickListener(this);
     }
 }

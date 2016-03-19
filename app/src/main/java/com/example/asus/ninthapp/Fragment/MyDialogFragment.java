@@ -40,5 +40,4 @@ public class MyDialogFragment extends DialogFragment {
         return myDialogFragment;
     }
 
-
 }

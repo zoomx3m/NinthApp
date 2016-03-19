@@ -27,7 +27,7 @@ public class DataHeadlessFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (savedInstanceState != null) {
             list = (List<Person>) savedInstanceState.getSerializable(Constants.LIST_KEY);
-            currentPerson = (Person) savedInstanceState.getSerializable(Constants.USER_KEY);
+            currentPerson = (Person) savedInstanceState.getSerializable(Constants.PERSON_KEY);
         }
         if (list == null) {
             list = new LinkedList<>();
@@ -39,7 +39,7 @@ public class DataHeadlessFragment extends Fragment {
         public void onSaveInstanceState(Bundle outState) {
             super.onSaveInstanceState(outState);
             outState.putSerializable(Constants.LIST_KEY, (Serializable) list);
-            outState.putSerializable(Constants.USER_KEY, currentPerson);
+            outState.putSerializable(Constants.PERSON_KEY, currentPerson);
         }
 
         public void registerPerson(Person person) {
@@ -50,7 +50,6 @@ public class DataHeadlessFragment extends Fragment {
                 currentPerson = person;
             } else {
                 Toast.makeText(getActivity(), person.getFirstName() + getString(R.string.already_registered), Toast.LENGTH_SHORT).show();
-
             }
         }
 
